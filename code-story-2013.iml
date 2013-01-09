@@ -6,6 +6,10 @@
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/main/resources" />
+        </sourceRoots>
       </configuration>
     </facet>
   </component>
@@ -21,6 +25,39 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="JBoss 7.0.2.Final" level="application_server_libraries" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.8.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.jersey.core:jersey-server:2.0-m11" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.jersey.core:jersey-common:2.0-m11" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0-m15" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.google.guava:guava:13.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.hk2:hk2-api:2.1.51" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.hk2:osgi-resource-locator:1.0.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.hk2:hk2-utils:2.1.51" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.hk2:hk2-locator:2.1.51" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.hk2.external:javax.inject:2.1.51" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.hk2.external:asm-all-repackaged:2.1.51" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.hk2.external:cglib:2.1.51" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.jersey.core:jersey-client:2.0-m11" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: javax.validation:validation-api:1.1.0.Beta2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.jersey.containers:jersey-container-servlet:2.0-m11" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.jersey.containers:jersey-container-servlet-core:2.0-m11" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.sun.jersey:jersey-test-framework:1.1.5.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.sun.jersey:jersey-server:1.1.5.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.sun.jersey:jersey-core:1.1.5.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: javax.ws.rs:jsr311-api:1.1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: asm:asm:3.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.sun.jersey:jersey-client:1.1.5.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.sun.grizzly:grizzly-servlet-webserver:1.9.8" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.sun.grizzly:grizzly-http:1.9.8" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.sun.grizzly:grizzly-framework:1.9.8" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.sun.grizzly:grizzly-utils:1.9.8" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.sun.grizzly:grizzly-rcm:1.9.8" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.sun.grizzly:grizzly-portunif:1.9.8" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.sun.grizzly:grizzly-http-servlet:1.9.8" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.embedded:glassfish-embedded-all:3.0-Prelude-Embedded-b14" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.jersey.containers:jersey-container-jdk-http:2.0-m11" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax:javaee-web-api:6.0" level="project" />
   </component>
 </module>

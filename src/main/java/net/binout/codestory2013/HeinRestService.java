@@ -6,8 +6,10 @@ import javax.ws.rs.Path;
 @Path("/")
 public class HeinRestService {
 
+    final static String MAIL = "binout@gmail.com";
+
     @GET
     public String getEmail() {
-        return "binout@gmail.com";
+        return MAIL;
     }
 }

@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.URI;
 
-public class HeinRestServiceITest {
+public class HeinRestServiceIT {
 
     private static HttpServer server;
     private static URI uri;

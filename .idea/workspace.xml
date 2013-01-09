@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a4d6871-49b8-4937-b74f-135277a5d94d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceITest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_13_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_grizzly_grizzly_framework_1_9_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_grizzly_grizzly_http_1_9_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_grizzly_grizzly_http_servlet_1_9_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_grizzly_grizzly_portunif_1_9_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_grizzly_grizzly_rcm_1_9_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_grizzly_grizzly_servlet_webserver_1_9_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_grizzly_grizzly_utils_1_9_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_1_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_1_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_1_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_test_framework_1_1_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Beta2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_0_m15.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_8_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_embedded_glassfish_embedded_all_3_0_Prelude_Embedded_b14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_asm_all_repackaged_2_1_51.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_cglib_2_1_51.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_javax_inject_2_1_51.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_2_1_51.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_2_1_51.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_2_1_51.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_containers_jersey_container_jdk_http_2_0_m11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_containers_jersey_container_servlet_2_0_m11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_containers_jersey_container_servlet_core_2_0_m11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_client_2_0_m11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_0_m11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_server_2_0_m11.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestApplication.java" afterPath="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java" afterPath="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceITest.java" afterPath="$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code-story-2013.iml" afterPath="$PROJECT_DIR$/code-story-2013.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -112,19 +76,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="9" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0">
+            <state line="69" column="21" selection-start="2485" selection-end="2485" vertical-scroll-proportion="0.5192308">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HeinRestServiceITest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceITest.java">
+      <file leaf-file-name="HeinRestServiceIT.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="40" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.8397436">
+            <state line="39" column="15" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -142,7 +106,7 @@
       <file leaf-file-name="HeinRestService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="18" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
+            <state line="15" column="0" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,9 +145,9 @@
         <option value="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestApplication.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceITest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -341,8 +305,8 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.HeinRestServiceITest">
-    <configuration default="false" name="HeinRestServiceITest" type="JUnit" factoryName="JUnit" temporary="true">
+  <component name="RunManager" selected="JUnit.HeinRestServiceIT">
+    <configuration default="false" name="HeinRestServiceIT" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="net.binout.codestory2013.*" />
@@ -353,7 +317,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="net.binout.codestory2013" />
-      <option name="MAIN_CLASS_NAME" value="net.binout.codestory2013.HeinRestServiceITest" />
+      <option name="MAIN_CLASS_NAME" value="net.binout.codestory2013.HeinRestServiceIT" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -644,12 +608,12 @@
     </configuration>
     <list size="3">
       <item index="0" class="java.lang.String" itemvalue="JBoss Server.JBoss 7.0.2.Final" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.HeinRestServiceITest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.HeinRestServiceIT" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.All in code-story-2013" />
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.HeinRestServiceITest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.HeinRestServiceIT" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.All in code-story-2013" />
       </list>
     </recent_temporary>
@@ -690,7 +654,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.67027026" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -779,7 +743,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceITest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="40" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
           <folding />
@@ -828,13 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="9" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="19" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0">
@@ -844,14 +801,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="18" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
+        <state line="15" column="0" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceITest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="40" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.8397436">
+        <state line="39" column="15" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="21" selection-start="2485" selection-end="2485" vertical-scroll-proportion="0.5192308">
           <folding />
         </state>
       </provider>

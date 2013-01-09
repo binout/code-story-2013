@@ -24,16 +24,10 @@ public class HeinRestServiceIT {
 
         client = ClientFactory.newClient();
 
-        // create a new server listening at port 8080
         server = HttpServer.create(new InetSocketAddress(uri.getPort()), 0);
-
-        // create a handler wrapping the JAX-RS application
         HttpHandler handler = RuntimeDelegate.getInstance().createEndpoint(new HeinRestApplication(), HttpHandler.class);
-
-        // map JAX-RS handler to the server root
         server.createContext(uri.getPath(), handler);
 
-        // start the server
         server.start();
     }
 
@@ -44,7 +38,7 @@ public class HeinRestServiceIT {
 
     @Test
     public void shouldReturnMail() {
-        String mail = client.target(uri).request().get(String.class);
+        String mail = client.target(uri + "?q=Quelle+est+ton+adresse+email").request().get(String.class);
         Assert.assertEquals(HeinRestService.MAIL, mail);
     }
 

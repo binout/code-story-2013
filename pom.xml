@@ -10,6 +10,23 @@
     <packaging>war</packaging>
 
     <name>code-story-2013</name>
+    <developers>
+        <developer>
+            <id>binout</id>
+            <name>Benoit Prioux</name>
+            <email>binout@gmail.com</email>
+            <url>http://javaonemorething.wordpress.com</url>
+            <timezone>+1</timezone>
+            <roles>
+                <role>Java Developer</role>
+            </roles>
+        </developer>
+    </developers>
+    <url>https://github.com/binout/code-story-2013</url>
+    <ciManagement>
+        <system>buildhive</system>
+        <url>https://buildhive.cloudbees.com/job/binout/job/code-story-2013/</url>
+    </ciManagement>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>

@@ -6,8 +6,10 @@ import org.junit.*;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientFactory;
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.ext.RuntimeDelegate;
+import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.URI;
@@ -36,10 +38,29 @@ public class HeinRestServiceIT {
         server.stop(0);
     }
 
+    private String transformQuery(String query) {
+        return query.replaceAll(" ", "+");
+    }
+
     @Test
-    public void shouldReturnMail() {
-        String mail = client.target(uri + "?q=Quelle+est+ton+adresse+email").request().get(String.class);
+    public void get_should_return_mail() {
+        String mailQuery = uri + "?" + HeinRestService.Q + "=" + transformQuery(HeinRestService.QUELLE_EST_TON_ADRESSE_EMAIL);
+        String mail = client.target(mailQuery).request().get(String.class);
         Assert.assertEquals(HeinRestService.MAIL, mail);
+    }
+
+    @Test
+    public void get_should_return_mail_with_ok_status() {
+        String mailQuery = uri + "?" + HeinRestService.Q + "=" + transformQuery(HeinRestService.QUELLE_EST_TON_ADRESSE_EMAIL);
+        Response response = client.target(mailQuery).request().get(Response.class);
+        Assert.assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
+        Assert.assertEquals(HeinRestService.MAIL, response.readEntity(String.class));
+    }
+
+    @Test
+    public void post_should_response_created_status() {
+        Response response = client.target(uri).request().post(Entity.text("message"));
+        Assert.assertEquals(Response.Status.CREATED.getStatusCode(), response.getStatus());
     }
 
 }

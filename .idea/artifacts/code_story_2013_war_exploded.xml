@@ -7,6 +7,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="code-story-2013" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.markdownj:markdownj:0.3.0-1.0.2b4" />
+        </element>
       </element>
     </root>
   </artifact>

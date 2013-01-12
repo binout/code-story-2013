@@ -13,6 +13,7 @@ public class HeinRestApplication extends Application {
     public HeinRestApplication() {
         classes = new HashSet<Class<?>>();
         classes.add(HeinRestService.class);
+        classes.add(HeinRestEnonce.class);
     }
 
     @Override

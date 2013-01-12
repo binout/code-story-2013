@@ -1,5 +1,6 @@
 package net.binout.codestory2013;
 
+import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -20,8 +21,11 @@ public class HeinRestService {
     static final String MAIL = "binout@gmail.com";
     static final String ES_TU_ABONNE_A_LA_MAILING_LIST_OUI_NON = "Es tu abonne a la mailing list(OUI/NON)";
     static final String ES_TU_HEUREUX_DE_PARTICIPER_OUI_NON = "Es tu heureux de participer(OUI/NON)";
+    static final String ES_TU_PRET_A_RECEVOIR_UNE_ENONCE_AU_FORMAT_MARKDOWN_PAR_HTTP_POST_OUI_NON = "Es tu pret a recevoir une enonce au format markdown par http post(OUI/NON)";
     static final String OUI = "OUI";
 
+    @Inject
+    private HeinRestEnonce restEnonce;
 
     @GET
     public Response get(@Context UriInfo uriInfo, @QueryParam(Q) String query) {
@@ -32,7 +36,8 @@ public class HeinRestService {
             return Response.ok(MAIL).build();
         }
         if (ES_TU_ABONNE_A_LA_MAILING_LIST_OUI_NON.equals(query)
-                || ES_TU_HEUREUX_DE_PARTICIPER_OUI_NON.equals(query)) {
+                || ES_TU_HEUREUX_DE_PARTICIPER_OUI_NON.equals(query)
+                || ES_TU_PRET_A_RECEVOIR_UNE_ENONCE_AU_FORMAT_MARKDOWN_PAR_HTTP_POST_OUI_NON.equals(query)) {
             return Response.ok(OUI).build();
         }
         return Response.ok("Hein binout?").build();
@@ -52,6 +57,10 @@ public class HeinRestService {
     @POST
     public Response post(String message) {
         System.out.println("\nPOST : Message : " + message);
+        if (restEnonce != null) {
+            // CDI is bootstrap
+            restEnonce.addEnonce(message);
+        }
         return Response.status(Response.Status.CREATED).build();
     }
 }

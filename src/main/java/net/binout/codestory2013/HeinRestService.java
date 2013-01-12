@@ -18,7 +18,7 @@ public class HeinRestService {
     static final String Q = "q";
     static final String QUELLE_EST_TON_ADRESSE_EMAIL = "Quelle est ton adresse email";
     static final String MAIL = "binout@gmail.com";
-    static final String ES_TU_ABONNE_A_LA_MAILING_LIST = "Es tu abonne a la mailing list";
+    static final String ES_TU_ABONNE_A_LA_MAILING_LIST = "Es tu abonne a la mailing list(OUI/NON)";
     static final String OUI = "OUI";
 
 

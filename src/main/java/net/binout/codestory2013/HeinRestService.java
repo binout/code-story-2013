@@ -27,10 +27,10 @@ public class HeinRestService {
         System.out.println("\nGET");
         logAllQueryParameters(uriInfo);
 
-        if (query.equals(QUELLE_EST_TON_ADRESSE_EMAIL)) {
+        if (QUELLE_EST_TON_ADRESSE_EMAIL.equals(query)) {
             return Response.ok(MAIL).build();
         }
-        if (query.equals(ES_TU_ABONNE_A_LA_MAILING_LIST)) {
+        if (ES_TU_ABONNE_A_LA_MAILING_LIST.equals(query)) {
             return Response.ok(OUI).build();
         }
         return Response.ok("Hein binout?").build();

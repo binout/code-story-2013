@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7a4d6871-49b8-4937-b74f-135277a5d94d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java" afterPath="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java" afterPath="$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="code-story-2013.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1357983490912" ignored="false" />
     <file path="/pom.xml" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1357761967193" ignored="false" />
-    <file path="/HeinRestService.java" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1357983570084" ignored="false" />
+    <file path="/HeinRestService.java" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1357984099158" ignored="false" />
     <file path="/web.xml" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1357673068674" ignored="false" />
     <file path="/HeinRestApplication.java" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1357755720114" ignored="false" />
     <file path="/index.html" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1357673678622" ignored="false" />
@@ -83,10 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HeinRestServiceIT.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HeinRestServiceIT.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="13" selection-start="1551" selection-end="1551" vertical-scroll-proportion="1.2179487">
+            <state line="50" column="13" selection-start="1551" selection-end="1551" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -101,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HeinRestService.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HeinRestService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="32" selection-start="1469" selection-end="1469" vertical-scroll-proportion="0.0">
+            <state line="29" column="45" selection-start="905" selection-end="905" vertical-scroll-proportion="0.23076923">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -848,19 +848,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="32" selection-start="1469" selection-end="1469" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="50" column="13" selection-start="1551" selection-end="1551" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="13" selection-start="1551" selection-end="1551" vertical-scroll-proportion="1.2179487">
-          <folding />
+        <state line="29" column="45" selection-start="905" selection-end="905" vertical-scroll-proportion="0.23076923">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

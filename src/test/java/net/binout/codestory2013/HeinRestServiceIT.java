@@ -58,6 +58,21 @@ public class HeinRestServiceIT {
     }
 
     @Test
+    public void get_should_return_oui_for_mailing_list() {
+        String mailQuery = uri + "?" + HeinRestService.Q + "=" + transformQuery(HeinRestService.ES_TU_ABONNE_A_LA_MAILING_LIST);
+        String mail = client.target(mailQuery).request().get(String.class);
+        Assert.assertEquals(HeinRestService.OUI, mail);
+    }
+
+    @Test
+    public void get_should_return_oui_for_mailing_list_with_ok_status() {
+        String mailQuery = uri + "?" + HeinRestService.Q + "=" + transformQuery(HeinRestService.ES_TU_ABONNE_A_LA_MAILING_LIST);
+        Response response = client.target(mailQuery).request().get(Response.class);
+        Assert.assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
+        Assert.assertEquals(HeinRestService.OUI, response.readEntity(String.class));
+    }
+
+    @Test
     public void post_should_response_created_status() {
         Response response = client.target(uri).request().post(Entity.text("message"));
         Assert.assertEquals(Response.Status.CREATED.getStatusCode(), response.getStatus());

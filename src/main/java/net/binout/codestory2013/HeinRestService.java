@@ -18,23 +18,29 @@ public class HeinRestService {
     static final String Q = "q";
     static final String QUELLE_EST_TON_ADRESSE_EMAIL = "Quelle est ton adresse email";
     static final String MAIL = "binout@gmail.com";
+    static final String ES_TU_ABONNE_A_LA_MAILING_LIST = "Es tu abonne a la mailing list";
+    static final String OUI = "OUI";
 
 
     @GET
     public Response get(@Context UriInfo uriInfo, @QueryParam(Q) String query) {
+        System.out.println("\nGET");
         logAllQueryParameters(uriInfo);
 
         if (query.equals(QUELLE_EST_TON_ADRESSE_EMAIL)) {
             return Response.ok(MAIL).build();
         }
-        return Response.ok().build();
+        if (query.equals(ES_TU_ABONNE_A_LA_MAILING_LIST)) {
+            return Response.ok(OUI).build();
+        }
+        return Response.ok("Hein binout?").build();
     }
 
     private void logAllQueryParameters(UriInfo uriInfo) {
         MultivaluedMap<String,String> queryParameters = uriInfo.getQueryParameters();
         Set<Map.Entry<String,List<String>>> entries = queryParameters.entrySet();
         for (Map.Entry<String,List<String>> entry : entries) {
-            System.out.println("\nParameter : " + entry.getKey());
+            System.out.println("Parameter : " + entry.getKey());
             for (String value : entry.getValue()) {
                 System.out.println("Value : " + value);
             }
@@ -43,7 +49,7 @@ public class HeinRestService {
 
     @POST
     public Response post(String message) {
-        System.out.println("\nMessage : " + message);
+        System.out.println("\nPOST : Message : " + message);
         return Response.status(Response.Status.CREATED).build();
     }
 }

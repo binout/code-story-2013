@@ -18,7 +18,8 @@ public class HeinRestService {
     static final String Q = "q";
     static final String QUELLE_EST_TON_ADRESSE_EMAIL = "Quelle est ton adresse email";
     static final String MAIL = "binout@gmail.com";
-    static final String ES_TU_ABONNE_A_LA_MAILING_LIST = "Es tu abonne a la mailing list(OUI/NON)";
+    static final String ES_TU_ABONNE_A_LA_MAILING_LIST_OUI_NON = "Es tu abonne a la mailing list(OUI/NON)";
+    static final String ES_TU_HEUREUX_DE_PARTICIPER_OUI_NON = "Es tu heureux de participer(OUI/NON)";
     static final String OUI = "OUI";
 
 
@@ -30,7 +31,8 @@ public class HeinRestService {
         if (QUELLE_EST_TON_ADRESSE_EMAIL.equals(query)) {
             return Response.ok(MAIL).build();
         }
-        if (ES_TU_ABONNE_A_LA_MAILING_LIST.equals(query)) {
+        if (ES_TU_ABONNE_A_LA_MAILING_LIST_OUI_NON.equals(query)
+                || ES_TU_HEUREUX_DE_PARTICIPER_OUI_NON.equals(query)) {
             return Response.ok(OUI).build();
         }
         return Response.ok("Hein binout?").build();

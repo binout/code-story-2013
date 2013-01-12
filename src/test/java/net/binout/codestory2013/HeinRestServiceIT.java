@@ -2,7 +2,11 @@ package net.binout.codestory2013;
 
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
-import org.junit.*;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientFactory;
@@ -20,7 +24,7 @@ public class HeinRestServiceIT {
     private static URI uri;
     private static Client client;
 
-    @BeforeClass
+    @BeforeClass 
     public static void init() throws IOException {
         uri = UriBuilder.fromUri("http://localhost/").port(8282).build();
 
@@ -42,34 +46,28 @@ public class HeinRestServiceIT {
         return query.replaceAll(" ", "+");
     }
 
-    @Test
-    public void get_should_return_mail() {
-        String mailQuery = uri + "?" + HeinRestService.Q + "=" + transformQuery(HeinRestService.QUELLE_EST_TON_ADRESSE_EMAIL);
-        String mail = client.target(mailQuery).request().get(String.class);
-        Assert.assertEquals(HeinRestService.MAIL, mail);
+    @DataProvider
+    public Object[][] query_response_provider() {
+        return new Object[][] {
+                new String[] {HeinRestService.QUELLE_EST_TON_ADRESSE_EMAIL, HeinRestService.MAIL},
+                new String[] {HeinRestService.ES_TU_ABONNE_A_LA_MAILING_LIST_OUI_NON, HeinRestService.OUI},
+                new String[] {HeinRestService.ES_TU_HEUREUX_DE_PARTICIPER_OUI_NON, HeinRestService.OUI},
+        };
     }
 
-    @Test
-    public void get_should_return_mail_with_ok_status() {
-        String mailQuery = uri + "?" + HeinRestService.Q + "=" + transformQuery(HeinRestService.QUELLE_EST_TON_ADRESSE_EMAIL);
+    @Test(dataProvider = "query_response_provider")
+    public void get_should_return_response(String query, String expected) {
+        String mailQuery = uri + "?" + HeinRestService.Q + "=" + transformQuery(query);
+        String response = client.target(mailQuery).request().get(String.class);
+        Assert.assertEquals(expected, response);
+    }
+
+    @Test(dataProvider = "query_response_provider")
+    public void get_should_return_response_with_ok_status(String query, String expected) {
+        String mailQuery = uri + "?" + HeinRestService.Q + "=" + transformQuery(query);
         Response response = client.target(mailQuery).request().get(Response.class);
         Assert.assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
-        Assert.assertEquals(HeinRestService.MAIL, response.readEntity(String.class));
-    }
-
-    @Test
-    public void get_should_return_oui_for_mailing_list() {
-        String mailQuery = uri + "?" + HeinRestService.Q + "=" + transformQuery(HeinRestService.ES_TU_ABONNE_A_LA_MAILING_LIST);
-        String mail = client.target(mailQuery).request().get(String.class);
-        Assert.assertEquals(HeinRestService.OUI, mail);
-    }
-
-    @Test
-    public void get_should_return_oui_for_mailing_list_with_ok_status() {
-        String mailQuery = uri + "?" + HeinRestService.Q + "=" + transformQuery(HeinRestService.ES_TU_ABONNE_A_LA_MAILING_LIST);
-        Response response = client.target(mailQuery).request().get(Response.class);
-        Assert.assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
-        Assert.assertEquals(HeinRestService.OUI, response.readEntity(String.class));
+        Assert.assertEquals(expected, response.readEntity(String.class));
     }
 
     @Test

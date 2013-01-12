@@ -22,7 +22,9 @@ public class HeinRestService {
     static final String ES_TU_ABONNE_A_LA_MAILING_LIST_OUI_NON = "Es tu abonne a la mailing list(OUI/NON)";
     static final String ES_TU_HEUREUX_DE_PARTICIPER_OUI_NON = "Es tu heureux de participer(OUI/NON)";
     static final String ES_TU_PRET_A_RECEVOIR_UNE_ENONCE_AU_FORMAT_MARKDOWN_PAR_HTTP_POST_OUI_NON = "Es tu pret a recevoir une enonce au format markdown par http post(OUI/NON)";
+    static final String EST_CE_QUE_TU_REPONDS_TOUJOURS_OUI_OUI_NON = "Est ce que tu reponds toujours oui(OUI/NON)";
     static final String OUI = "OUI";
+    static final String NON = "NON";
 
     @Inject
     private HeinRestEnonce restEnonce;
@@ -39,6 +41,9 @@ public class HeinRestService {
                 || ES_TU_HEUREUX_DE_PARTICIPER_OUI_NON.equals(query)
                 || ES_TU_PRET_A_RECEVOIR_UNE_ENONCE_AU_FORMAT_MARKDOWN_PAR_HTTP_POST_OUI_NON.equals(query)) {
             return Response.ok(OUI).build();
+        }
+        if (EST_CE_QUE_TU_REPONDS_TOUJOURS_OUI_OUI_NON.equals(query)) {
+            return Response.ok(NON).build();
         }
         return Response.ok("Hein binout?").build();
     }

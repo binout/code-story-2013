@@ -73,6 +73,14 @@ public class HeinRestServiceIT {
     }
 
     @Test
+    public void get_should_return_bad_equest_for_unkwon_question() {
+        String query = "quel est ton film prefere";
+        String mailQuery = uri + "?" + HeinRestService.Q + "=" + transformQuery(query);
+        Response response = client.target(mailQuery).request().get(Response.class);
+        Assert.assertEquals(Response.Status.BAD_REQUEST.getStatusCode(), response.getStatus());
+    }
+
+    @Test
     public void post_should_response_created_status() {
         Response response = client.target(uri).request().post(Entity.text("message"));
         Assert.assertEquals(Response.Status.CREATED.getStatusCode(), response.getStatus());

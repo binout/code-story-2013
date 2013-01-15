@@ -45,7 +45,7 @@ public class HeinRestService {
         if (EST_CE_QUE_TU_REPONDS_TOUJOURS_OUI_OUI_NON.equals(query)) {
             return Response.ok(NON).build();
         }
-        return Response.ok("Hein binout?").build();
+        return Response.status(Response.Status.BAD_REQUEST).entity("Hein binout?").build();
     }
 
     private void logAllQueryParameters(UriInfo uriInfo) {

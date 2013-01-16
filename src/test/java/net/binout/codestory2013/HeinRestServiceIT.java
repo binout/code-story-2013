@@ -81,8 +81,9 @@ public class HeinRestServiceIT {
     }
 
     @Test
-    public void post_should_response_created_status() {
-        Response response = client.target(uri).request().post(Entity.text("message"));
+    public void post_enonce_should_response_created_status() {
+        String postEnonceQuery = uri + "enonce/1";
+        Response response = client.target(postEnonceQuery).request().post(Entity.text("enonce"));
         Assert.assertEquals(Response.Status.CREATED.getStatusCode(), response.getStatus());
     }
 

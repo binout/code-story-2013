@@ -1,19 +1,20 @@
 package net.binout.codestory2013;
 
-import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.QueryParam;
+import com.petebevin.markdown.MarkdownProcessor;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 @Path("/")
+@ApplicationScoped
 public class HeinRestService {
 
     static final String Q = "q";
@@ -26,8 +27,7 @@ public class HeinRestService {
     static final String OUI = "OUI";
     static final String NON = "NON";
 
-    @Inject
-    private HeinRestEnonce restEnonce;
+    private List<String> enonces = new ArrayList<String>();
 
     @GET
     public Response get(@Context UriInfo uriInfo, @QueryParam(Q) String query) {
@@ -59,13 +59,25 @@ public class HeinRestService {
         }
     }
 
-    @POST
-    public Response post(String message) {
-        System.out.println("\nPOST : Message : " + message);
-        if (restEnonce != null) {
-            // CDI is bootstrap
-            restEnonce.addEnonce(message);
+    @GET
+    @Path("/enonce")
+    public String getEnonces() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("<hr/>");
+        MarkdownProcessor m = new MarkdownProcessor();
+        for(String enonce : enonces) {
+            builder.append(m.markdown(enonce));
+            builder.append("<hr/>");
         }
+        return builder.toString();
+    }
+
+    @POST
+    @Path("/enonce/{id}")
+    public Response postEnonce(@PathParam("id") String id, String message) {
+        System.out.println("\nPOST : Enonce" + id);
+        enonces.add(message);
+        System.out.println(message);
         return Response.status(Response.Status.CREATED).build();
     }
 }

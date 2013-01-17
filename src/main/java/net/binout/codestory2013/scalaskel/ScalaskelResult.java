@@ -1,8 +1,5 @@
 package net.binout.codestory2013.scalaskel;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement
 public class ScalaskelResult {
 
     private Integer foo;
@@ -20,6 +17,14 @@ public class ScalaskelResult {
 
     public Integer getBar() {
         return bar;
+    }
+
+    public void addBar(Integer bar) {
+        if (this.bar == null) {
+            this.bar = new Integer(bar);
+        } else {
+            this.bar += bar;
+        }
     }
 
     public void setBar(Integer bar) {

@@ -1,22 +1,34 @@
 package net.binout.codestory2013.scalaskel;
 
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Scalaskel {
 
     public List<ScalaskelResult> change(int nbCents) {
-        if (nbCents == 1) {
-            ScalaskelResult result  = new ScalaskelResult();
-            result.setFoo(1);
-            return Collections.singletonList(result);
-        }  else {
-            ScalaskelResult result1  = new ScalaskelResult();
-            result1.setBar(1);
-            ScalaskelResult result2  = new ScalaskelResult();
-            result2.setFoo(7);
-            return Arrays.asList(result2, result1);
+        List<ScalaskelResult> toReturn = new ArrayList<ScalaskelResult>();
+
+        ScalaskelResult withFoo  = new ScalaskelResult();
+        withFoo.setFoo(nbCents);
+
+        toReturn.add(withFoo);
+
+        if (nbCents == 7) {
+            ScalaskelResult withBar  = new ScalaskelResult();
+            withBar.setBar(1);
+            toReturn.add(withBar);
         }
+
+        if (nbCents > 7) {
+             int nbBar = (nbCents / 7) -1;
+             if (nbBar == 0) nbBar = 1;
+             List<ScalaskelResult> barChange = change(nbCents - 7);
+             for (ScalaskelResult barResult : barChange) {
+                 barResult.addBar(nbBar);
+             }
+             toReturn.addAll(barChange);
+        }
+
+        return toReturn;
     }
 }

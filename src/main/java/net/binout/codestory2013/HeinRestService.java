@@ -2,21 +2,18 @@ package net.binout.codestory2013;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.CharStreams;
+import com.google.gson.Gson;
 import com.petebevin.markdown.MarkdownProcessor;
+import net.binout.codestory2013.scalaskel.Scalaskel;
+import net.binout.codestory2013.scalaskel.ScalaskelResult;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MultivaluedMap;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
+import javax.ws.rs.core.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 @Path("/")
 @ApplicationScoped
@@ -34,11 +31,17 @@ public class HeinRestService {
     public static final String AS_TU_BIEN_RECU_LE_PREMIER_ENONCE_OUI_NON = "As tu bien recu le premier enonce(OUI/NON)";
 
     private List<String> enonces = new ArrayList<String>();
+    private Scalaskel scalaskel = new Scalaskel();
+    private Gson gson = new Gson();
 
     public HeinRestService() throws IOException {
         InputStream stream = Thread.currentThread().getContextClassLoader().getResourceAsStream("scalaskel.txt");
         String scalaskel = CharStreams.toString(new InputStreamReader(stream, Charsets.UTF_8));
         enonces.add(scalaskel);
+    }
+
+    private Response badRequest() {
+        return Response.status(Response.Status.BAD_REQUEST).entity("Hein binout?").build();
     }
 
     @GET
@@ -58,7 +61,7 @@ public class HeinRestService {
         if (EST_CE_QUE_TU_REPONDS_TOUJOURS_OUI_OUI_NON.equals(query)) {
             return Response.ok(NON).build();
         }
-        return Response.status(Response.Status.BAD_REQUEST).entity("Hein binout?").build();
+        return badRequest();
     }
 
     private void logAllQueryParameters(UriInfo uriInfo) {
@@ -93,4 +96,23 @@ public class HeinRestService {
         System.out.println(message);
         return Response.status(Response.Status.CREATED).build();
     }
+
+    @GET
+    @Path("scalaskel/change/{X}")
+    public Response getScalaskel(@PathParam("X") String number) {
+        System.out.println("\nGET : scalaskel/change/" + number);
+        int toChange;
+        try {
+            toChange = Integer.valueOf(number);
+        } catch (NumberFormatException e) {
+            return badRequest();
+        }
+        if (toChange<1 || toChange>100) {
+            return badRequest();
+        }
+        List<ScalaskelResult> result = scalaskel.change(toChange);
+        String json = gson.toJson(result);
+        return Response.ok(json, MediaType.APPLICATION_JSON_TYPE).build();
+    }
+
 }

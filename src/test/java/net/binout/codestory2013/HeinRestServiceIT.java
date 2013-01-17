@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientFactory;
 import javax.ws.rs.client.Entity;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.ext.RuntimeDelegate;
 import javax.ws.rs.core.Response;
@@ -88,4 +89,33 @@ public class HeinRestServiceIT {
         Assert.assertEquals(Response.Status.CREATED.getStatusCode(), response.getStatus());
     }
 
+    @DataProvider
+    public Object[][] query_response_scalaskel() {
+        return new Object[][] {
+                new String[] {"1", "[{\"foo\":1}]"},
+                new String[] {"7", "[{\"foo\":7},{\"bar\":1}]"},
+        };
+    }
+
+    @Test(dataProvider = "query_response_scalaskel")
+    public void get_scalaskel_should_return_json_result(String number, String expected) {
+        String scalaskelQuery = uri + "scalaskel/change/" + number;
+        Response response = client.target(scalaskelQuery).request(MediaType.APPLICATION_JSON_TYPE).get(Response.class);
+        Assert.assertEquals(response.getStatus(), Response.Status.OK.getStatusCode());
+        Assert.assertEquals(response.readEntity(String.class), expected);
+    }
+
+    @Test
+    public void get_scalaskel_0_should_return_bad_request() {
+        String scalaskelQuery = uri + "scalaskel/change/0";
+        Response response = client.target(scalaskelQuery).request(MediaType.APPLICATION_JSON_TYPE).get(Response.class);
+        Assert.assertEquals(response.getStatus(), Response.Status.BAD_REQUEST.getStatusCode());
+    }
+
+    @Test
+    public void get_scalaskel_101_should_return_bad_request() {
+        String scalaskelQuery = uri + "scalaskel/change/101";
+        Response response = client.target(scalaskelQuery).request(MediaType.APPLICATION_JSON_TYPE).get(Response.class);
+        Assert.assertEquals(response.getStatus(), Response.Status.BAD_REQUEST.getStatusCode());
+    }
 }

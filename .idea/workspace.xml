@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java" line="50" mnemonic="5" />
+    <bookmark url="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java" line="51" mnemonic="5" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a4d6871-49b8-4937-b74f-135277a5d94d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/scalaskel/Scalaskel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/scalaskel/ScalaskelResult.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java" afterPath="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java" afterPath="$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code-story-2013.iml" afterPath="$PROJECT_DIR$/code-story-2013.iml" />
@@ -14,16 +17,18 @@
     </list>
     <ignored path="code-story-2013.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1358447705568" ignored="false" />
+    <file path="/Dummy.txt" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1358453018052" ignored="false" />
     <file path="/pom.xml" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1358448020625" ignored="false" />
-    <file path="/HeinRestService.java" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1358448399544" ignored="false" />
+    <file path="/HeinRestService.java" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1358455359612" ignored="false" />
     <file path="/web.xml" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1357673068674" ignored="false" />
     <file path="/HeinRestApplication.java" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1357988190624" ignored="false" />
     <file path="/index.html" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1357673678622" ignored="false" />
     <file path="/.gitignore" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1357673900302" ignored="false" />
-    <file path="/HeinRestServiceIT.java" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1358448456530" ignored="false" />
+    <file path="/HeinRestServiceIT.java" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1358455824058" ignored="false" />
     <file path="/HeinRestServiceITest.java" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1357755923463" ignored="false" />
     <file path="/HeinRestEnonce.java" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1357988071136" ignored="false" />
+    <file path="/ScalaskelResult.java" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1358454479541" ignored="false" />
+    <file path="/Scalaskel.java" changelist="7a4d6871-49b8-4937-b74f-135277a5d94d" time="1358455631428" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +77,22 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java" line="88" class="net.binout.codestory2013.HeinRestServiceIT" package="net.binout.codestory2013">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java" line="87" class="net.binout.codestory2013.HeinRestServiceIT" package="net.binout.codestory2013">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -87,22 +107,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java" line="86" class="net.binout.codestory2013.HeinRestServiceIT" package="net.binout.codestory2013">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
     </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -115,7 +120,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="25" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0">
+            <state line="34" column="33" selection-start="1249" selection-end="1249" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,7 +129,7 @@
       <file leaf-file-name="HeinRestServiceIT.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="44" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.17582418">
+            <state line="112" column="98" selection-start="4886" selection-end="4886" vertical-scroll-proportion="3.2986112">
               <folding />
             </state>
           </provider>
@@ -142,10 +147,39 @@
       <file leaf-file-name="HeinRestService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="50" selection-start="2503" selection-end="2503" vertical-scroll-proportion="0.0">
+            <state line="102" column="45" selection-start="4183" selection-end="4183" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Integer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_06.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="580" column="72" selection-start="21651" selection-end="21672" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scalaskel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/scalaskel/Scalaskel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="51" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScalaskelResult.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/scalaskel/ScalaskelResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="30" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -163,6 +197,15 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="15" column="0" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scalaskel.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/scalaskel.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="25" selection-start="1454" selection-end="1457" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -194,7 +237,9 @@
         <option value="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestEnonce.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestApplication.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/scalaskel/ScalaskelResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/binout/codestory2013/scalaskel/Scalaskel.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java" />
       </list>
     </option>
@@ -239,6 +284,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -357,9 +403,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code-story-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code-story-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codestory2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scalaskel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,68 +454,11 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="TestNG.HeinRestServiceIT">
-    <configuration default="false" name="HeinRestServiceIT" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="net.binout.codestory2013.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="code-story-2013" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="net.binout.codestory2013" />
-      <option name="MAIN_CLASS_NAME" value="net.binout.codestory2013.HeinRestServiceIT" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="All in code-story-2013" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="code-story-2013" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="TestNG.HeinRestServiceIT.get_scalaskel_101_should_return_bad_request">
     <configuration default="false" name="HeinRestServiceIT.post_enonce_should_response_created_status" type="TestNG" factoryName="TestNG" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -521,6 +539,111 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="HeinRestServiceIT.get_scalaskel_should_return_json_result" type="TestNG" factoryName="TestNG" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="net.binout.codestory2013.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="code-story-2013" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="net.binout.codestory2013" />
+      <option name="MAIN_CLASS_NAME" value="net.binout.codestory2013.HeinRestServiceIT" />
+      <option name="METHOD_NAME" value="get_scalaskel_should_return_json_result" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="HeinRestServiceIT.get_scalaskel_0_should_return_bad_request" type="TestNG" factoryName="TestNG" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="net.binout.codestory2013.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="code-story-2013" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="net.binout.codestory2013" />
+      <option name="MAIN_CLASS_NAME" value="net.binout.codestory2013.HeinRestServiceIT" />
+      <option name="METHOD_NAME" value="get_scalaskel_0_should_return_bad_request" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="HeinRestServiceIT.get_scalaskel_101_should_return_bad_request" type="TestNG" factoryName="TestNG" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="net.binout.codestory2013.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="code-story-2013" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="net.binout.codestory2013" />
+      <option name="MAIN_CLASS_NAME" value="net.binout.codestory2013.HeinRestServiceIT" />
+      <option name="METHOD_NAME" value="get_scalaskel_101_should_return_bad_request" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -533,18 +656,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JBossConfiguration" factoryName="Local">
-      <deployment />
-      <server-settings>
-        <option name="SERVER" value="" />
-        <option name="BINDING_SET_NAME" value="" />
-        <option name="USERNAME" value="" />
-        <option name="PASSWORD" value="" />
-      </server-settings>
-      <predefined_log_file id="JBoss" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="GlassfishConfiguration" factoryName="Local">
@@ -612,6 +723,31 @@
       </ConfigurationWrapper>
       <method />
     </configuration>
+    <configuration default="true" type="JBossConfiguration" factoryName="Local">
+      <deployment />
+      <server-settings>
+        <option name="SERVER" value="" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="USERNAME" value="" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file id="JBoss" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -640,19 +776,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -666,6 +789,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -687,13 +817,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="false" name="JBoss 7.0.2.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 7.0.2.Final">
@@ -770,19 +893,21 @@
         </option>
       </method>
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JBoss Server.JBoss 7.0.2.Final" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.HeinRestServiceIT" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.All in code-story-2013" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.HeinRestServiceIT.post_enonce_should_response_created_status" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.HeinRestServiceIT" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.HeinRestServiceIT.post_enonce_should_response_created_status" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.HeinRestServiceIT" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.HeinRestServiceIT.get_scalaskel_should_return_json_result" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.HeinRestServiceIT.get_scalaskel_0_should_return_bad_request" />
+      <item index="5" class="java.lang.String" itemvalue="TestNG.HeinRestServiceIT.get_scalaskel_101_should_return_bad_request" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.HeinRestServiceIT" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.HeinRestServiceIT.post_enonce_should_response_created_status" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.HeinRestServiceIT" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.All in code-story-2013" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="TestNG.HeinRestServiceIT.get_scalaskel_101_should_return_bad_request" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.HeinRestServiceIT.get_scalaskel_0_should_return_bad_request" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.HeinRestServiceIT.get_scalaskel_should_return_json_result" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.HeinRestServiceIT" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.HeinRestServiceIT.post_enonce_should_response_created_status" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -819,7 +944,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="72" y="22" width="1368" height="860" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -840,7 +965,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.67027026" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -908,36 +1033,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="54" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="31" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="40" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
@@ -975,6 +1070,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="9" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
@@ -982,15 +1082,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="33" selection-start="1249" selection-end="1249" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_06.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="580" column="72" selection-start="21651" selection-end="21672" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/scalaskel/Scalaskel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="51" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1001,25 +1119,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="25" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/HeinRestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="50" selection-start="2503" selection-end="2503" vertical-scroll-proportion="0.0">
+        <state line="102" column="45" selection-start="4183" selection-end="4183" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/scalaskel.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="25" selection-start="1454" selection-end="1457" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/binout/codestory2013/scalaskel/ScalaskelResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="30" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/net/binout/codestory2013/HeinRestServiceIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="44" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.17582418">
+        <state line="112" column="98" selection-start="4886" selection-end="4886" vertical-scroll-proportion="3.2986112">
           <folding />
         </state>
       </provider>

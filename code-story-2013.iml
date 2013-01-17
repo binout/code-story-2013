@@ -6,10 +6,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources" />
-        </sourceRoots>
       </configuration>
     </facet>
   </component>
@@ -25,6 +21,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="JBoss 7.0.2.Final" level="application_server_libraries" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:13.0" level="project" />
     <orderEntry type="library" name="Maven: org.markdownj:markdownj:0.3.0-1.0.2b4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.testng:testng:6.8" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.10" level="project" />
@@ -35,7 +32,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.jersey.core:jersey-server:2.0-m11" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.jersey.core:jersey-common:2.0-m11" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0-m15" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.google.guava:guava:13.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.hk2:hk2-api:2.1.51" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.hk2:osgi-resource-locator:1.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: javax.inject:javax.inject:1" level="project" />

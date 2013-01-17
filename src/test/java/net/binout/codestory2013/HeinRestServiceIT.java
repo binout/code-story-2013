@@ -54,6 +54,7 @@ public class HeinRestServiceIT {
                 new String[] {HeinRestService.ES_TU_HEUREUX_DE_PARTICIPER_OUI_NON, HeinRestService.OUI},
                 new String[] {HeinRestService.ES_TU_PRET_A_RECEVOIR_UNE_ENONCE_AU_FORMAT_MARKDOWN_PAR_HTTP_POST_OUI_NON, HeinRestService.OUI},
                 new String[] {HeinRestService.EST_CE_QUE_TU_REPONDS_TOUJOURS_OUI_OUI_NON, HeinRestService.NON},
+                new String[] {HeinRestService.AS_TU_BIEN_RECU_LE_PREMIER_ENONCE_OUI_NON, HeinRestService.OUI},
         };
     }
 

@@ -35,12 +35,28 @@ public class ScalaskelResult {
         return qix;
     }
 
+    public void addQix(Integer qix) {
+        if (this.qix == null) {
+            this.qix = new Integer(qix);
+        } else {
+            this.qix += qix;
+        }
+    }
+
     public void setQix(Integer qix) {
         this.qix = qix;
     }
 
     public Integer getBaz() {
         return baz;
+    }
+
+    public void addBaz(Integer baz) {
+        if (this.baz == null) {
+            this.baz = new Integer(baz);
+        } else {
+            this.baz += baz;
+        }
     }
 
     public void setBaz(Integer baz) {

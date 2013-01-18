@@ -1,12 +1,17 @@
 package net.binout.codestory2013;
 
 import com.google.common.base.Charsets;
+import com.google.common.base.Stopwatch;
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
 import com.google.common.io.CharStreams;
 import com.google.gson.Gson;
 import com.petebevin.markdown.MarkdownProcessor;
 import net.binout.codestory2013.scalaskel.Scalaskel;
 import net.binout.codestory2013.scalaskel.ScalaskelResult;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
@@ -30,14 +35,47 @@ public class HeinRestService {
     static final String NON = "NON";
     public static final String AS_TU_BIEN_RECU_LE_PREMIER_ENONCE_OUI_NON = "As tu bien recu le premier enonce(OUI/NON)";
 
-    private List<String> enonces = new ArrayList<String>();
-    private Scalaskel scalaskel = new Scalaskel();
-    private Gson gson = new Gson();
+    static final int MIN_SCALASKEL = 1;
+    static final int MAX_SCALASKEL = 100;
+    static final String SCALASKEL_NO_CACHE_LOADING_PROPERTY = "scalaskel.nocacheloading";
 
-    public HeinRestService() throws IOException {
-        InputStream stream = Thread.currentThread().getContextClassLoader().getResourceAsStream("scalaskel.txt");
-        String scalaskel = CharStreams.toString(new InputStreamReader(stream, Charsets.UTF_8));
-        enonces.add(scalaskel);
+    List<String> enonces;
+    LoadingCache<Integer, String> cache;
+
+    public HeinRestService() {
+        enonces = new ArrayList<String>();
+        try {
+            InputStream stream = Thread.currentThread().getContextClassLoader().getResourceAsStream("scalaskel.txt");
+            String scalaskelEnonce = CharStreams.toString(new InputStreamReader(stream, Charsets.UTF_8));
+            enonces.add(scalaskelEnonce);
+        } catch (IOException e) {
+            System.out.println("Cannot load enonces...");
+        }
+
+        final Scalaskel scalaskel = new Scalaskel();
+        final Gson gson = new Gson();
+        cache = CacheBuilder.newBuilder().maximumSize(MAX_SCALASKEL).build(new CacheLoader<Integer, String>() {
+            @Override
+            public String load(Integer key) throws Exception {
+                List<ScalaskelResult> result = scalaskel.change(key);
+                return gson.toJson(result);
+            }
+        });
+    }
+
+    @PostConstruct
+    public void initScalaskelCache() {
+        if ("true".equals(System.getProperty(SCALASKEL_NO_CACHE_LOADING_PROPERTY))) {
+            System.out.println("No cache, faster test");
+        } else {
+            Stopwatch sw = new Stopwatch();
+            sw.start();
+            System.out.println("Loading cache");
+            for(int i=MIN_SCALASKEL; i<=MAX_SCALASKEL; i++) {
+                cache.getUnchecked(i);
+            }
+            System.out.println("Cache loaded in : " + sw);
+        }
     }
 
     private Response badRequest() {
@@ -107,11 +145,10 @@ public class HeinRestService {
         } catch (NumberFormatException e) {
             return badRequest();
         }
-        if (toChange<1 || toChange>100) {
+        if (toChange<MIN_SCALASKEL || toChange>MAX_SCALASKEL) {
             return badRequest();
         }
-        List<ScalaskelResult> result = scalaskel.change(toChange);
-        String json = gson.toJson(result);
+        String json = cache.getUnchecked(toChange);
         return Response.ok(json, MediaType.APPLICATION_JSON_TYPE).build();
     }
 

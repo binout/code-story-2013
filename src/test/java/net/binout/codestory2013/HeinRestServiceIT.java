@@ -27,6 +27,8 @@ public class HeinRestServiceIT {
 
     @BeforeClass 
     public static void init() throws IOException {
+        System.setProperty(HeinRestService.SCALASKEL_NO_CACHE_LOADING_PROPERTY, "true");
+
         uri = UriBuilder.fromUri("http://localhost/").port(8282).build();
 
         client = ClientFactory.newClient();

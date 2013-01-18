@@ -31,6 +31,12 @@ public class Scalaskel {
              }
         }
 
+        if (nbCents == 11) {
+            ScalaskelResult withQix  = new ScalaskelResult();
+            withQix.setQix(1);
+            toReturn.add(withQix);
+        }
+
         if (nbCents > 11) {
             int nbQix = (nbCents / 11) -1;
             if (nbQix == 0) nbQix = 1;
@@ -41,6 +47,12 @@ public class Scalaskel {
                 }
                 toReturn.addAll(qixChange);
             }
+        }
+
+        if (nbCents == 21) {
+            ScalaskelResult withBaz  = new ScalaskelResult();
+            withBaz.setBaz(1);
+            toReturn.add(withBaz);
         }
 
         if (nbCents > 21) {

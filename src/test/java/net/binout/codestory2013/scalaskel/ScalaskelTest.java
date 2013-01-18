@@ -17,6 +17,7 @@ public class ScalaskelTest {
                 new Object[] {1,  "[{\"foo\":1}]"},
                 new Object[] {7,  "[{\"foo\":7},{\"bar\":1}]"},
                 new Object[] {8,  "[{\"foo\":8},{\"foo\":1,\"bar\":1}]"},
+                new Object[] {11, "[{\"foo\":11},{\"foo\":4,\"bar\":1},{\"qix\":1}]"},
                 new Object[] {14, "[{\"foo\":14},{\"foo\":7,\"bar\":1},{\"bar\":2},{\"foo\":3,\"qix\":1}]"},
                 new Object[] {15, "[{\"foo\":15},{\"foo\":8,\"bar\":1},{\"foo\":1,\"bar\":2},{\"foo\":4,\"qix\":1}]"},
         };

@@ -12,7 +12,8 @@ public class RhinoCalculatorTest {
     public Object[][] operations() {
         return new Object[][] {
                 new String[] {"1+1",  "2"},
-         };
+                new String[] {"(1+2)/2",  "1.5"},
+        };
     }
 
     @Test(dataProvider = "operations")

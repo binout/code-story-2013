@@ -107,6 +107,7 @@ public class HeinRestService {
             String expression = parseMathQuery(query);
             try {
                 String result = calculator.calculate(expression);
+                result = toMathFrench(result);
                 System.out.println(expression + " = " + result);
                 return Response.ok(result).build();
             } catch (Exception e) {
@@ -115,6 +116,10 @@ public class HeinRestService {
             }
         }
         return badRequest();
+    }
+
+    private String toMathFrench(String exp) {
+        return exp.replaceAll("\\.", ",");
     }
 
     private String parseMathQuery(String query) {

@@ -8,6 +8,7 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.io.CharStreams;
 import com.google.gson.Gson;
 import com.petebevin.markdown.MarkdownProcessor;
+import net.binout.codestory2013.calculator.RhinoCalculator;
 import net.binout.codestory2013.scalaskel.Scalaskel;
 import net.binout.codestory2013.scalaskel.ScalaskelResult;
 
@@ -41,6 +42,7 @@ public class HeinRestService {
 
     List<String> enonces;
     LoadingCache<Integer, String> cache;
+    RhinoCalculator calculator;
 
     public HeinRestService() {
         enonces = new ArrayList<String>();
@@ -61,6 +63,8 @@ public class HeinRestService {
                 return gson.toJson(result);
             }
         });
+
+        calculator = new RhinoCalculator();
     }
 
     @PostConstruct
@@ -99,7 +103,22 @@ public class HeinRestService {
         if (EST_CE_QUE_TU_REPONDS_TOUJOURS_OUI_OUI_NON.equals(query)) {
             return Response.ok(NON).build();
         }
+        if (query.matches(".*\\d.*")) {
+            String expression = parseMathQuery(query);
+            try {
+                String result = calculator.calculate(expression);
+                System.out.println(expression + " = " + result);
+                return Response.ok(result).build();
+            } catch (Exception e) {
+                System.out.println(expression + " = " + e.getMessage());
+                return badRequest();
+            }
+        }
         return badRequest();
+    }
+
+    private String parseMathQuery(String query) {
+        return query.replaceAll(" ", "+");
     }
 
     private void logAllQueryParameters(UriInfo uriInfo) {

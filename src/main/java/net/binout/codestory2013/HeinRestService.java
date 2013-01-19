@@ -25,6 +25,7 @@ import java.util.*;
 @ApplicationScoped
 public class HeinRestService {
 
+    static final String HEIN_BINOUT = "Hein binout?";
     static final String Q = "q";
     static final String QUELLE_EST_TON_ADRESSE_EMAIL = "Quelle est ton adresse email";
     static final String MAIL = "binout@gmail.com";
@@ -83,7 +84,7 @@ public class HeinRestService {
     }
 
     private Response badRequest() {
-        return Response.status(Response.Status.BAD_REQUEST).entity("Hein binout?").build();
+        return Response.status(Response.Status.BAD_REQUEST).entity(HEIN_BINOUT).build();
     }
 
     @GET
@@ -103,7 +104,7 @@ public class HeinRestService {
         if (EST_CE_QUE_TU_REPONDS_TOUJOURS_OUI_OUI_NON.equals(query)) {
             return Response.ok(NON).build();
         }
-        if (query.matches(".*\\d.*")) {
+        if (query != null && query.matches(".*\\d.*")) {
             String expression = parseMathQuery(query);
             try {
                 String result = calculator.calculate(expression);

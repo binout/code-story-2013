@@ -25,4 +25,10 @@ public class HeinRestServiceTest {
         service.initScalaskelCache();
         Assert.assertTrue(service.cache.size() > 0);
     }
+
+    @Test
+    public void constructor_should_create_calculator() {
+        HeinRestService service = new HeinRestService();
+        Assert.assertNotNull(service.calculator);
+    }
 }

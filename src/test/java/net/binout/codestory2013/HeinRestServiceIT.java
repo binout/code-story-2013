@@ -49,6 +49,13 @@ public class HeinRestServiceIT {
         return query.replaceAll(" ", "+");
     }
 
+    @Test
+    public void get_unknown_request_should_return_response_with_bad_request_status() {
+        Response response = client.target(uri).request().get(Response.class);
+        Assert.assertEquals(Response.Status.BAD_REQUEST.getStatusCode(), response.getStatus());
+        Assert.assertEquals(HeinRestService.HEIN_BINOUT, response.readEntity(String.class));
+    }
+
     @DataProvider
     public Object[][] query_response_provider() {
         return new Object[][] {

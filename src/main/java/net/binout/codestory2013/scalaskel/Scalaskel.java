@@ -4,68 +4,44 @@ import java.util.*;
 
 public class Scalaskel {
 
+    static Map<Integer, String> config = new TreeMap<Integer, String>();
+    {
+        config.put(7, "bar");
+        config.put(11, "qix");
+        config.put(21, "baz");
+    }
+
     public Set<ScalaskelResult> change(int nbCents) {
         Set<ScalaskelResult> toReturn = new LinkedHashSet<ScalaskelResult>();
 
         ScalaskelResult withFoo  = new ScalaskelResult();
         withFoo.setFoo(nbCents);
-
         toReturn.add(withFoo);
 
-        if (nbCents == 7) {
-            ScalaskelResult withBar  = new ScalaskelResult();
-            withBar.setBar(1);
-            toReturn.add(withBar);
-        }
-
-        if (nbCents > 7) {
-             int nbBar = (nbCents / 7) -1;
-             if (nbBar == 0) nbBar = 1;
-             for (int i = 1; i<=nbBar; i++) {
-                 Set<ScalaskelResult> barChange = change(nbCents - 7 * i);
-                 for (ScalaskelResult result : barChange) {
-                     result.addBar(i);
-                 }
-                 toReturn.addAll(barChange);
-             }
-        }
-
-        if (nbCents == 11) {
-            ScalaskelResult withQix  = new ScalaskelResult();
-            withQix.setQix(1);
-            toReturn.add(withQix);
-        }
-
-        if (nbCents > 11) {
-            int nbQix = (nbCents / 11) -1;
-            if (nbQix == 0) nbQix = 1;
-            for (int i = 1; i<=nbQix; i++) {
-                Set<ScalaskelResult> qixChange = change(nbCents - 11 * i);
-                for (ScalaskelResult result : qixChange) {
-                    result.addQix(i);
-                }
-                toReturn.addAll(qixChange);
-            }
-        }
-
-        if (nbCents == 21) {
-            ScalaskelResult withBaz  = new ScalaskelResult();
-            withBaz.setBaz(1);
-            toReturn.add(withBaz);
-        }
-
-        if (nbCents > 21) {
-            int nbBaz = (nbCents / 21) -1;
-            if (nbBaz == 0) nbBaz = 1;
-            for (int i = 1; i<=nbBaz; i++) {
-                Set<ScalaskelResult> bazChnage = change(nbCents - 21 * i);
-                for (ScalaskelResult result : bazChnage) {
-                    result.addBaz(i);
-                }
-                toReturn.addAll(bazChnage);
-            }
+        for (Map.Entry<Integer, String> entry : config.entrySet()) {
+            manageDivisor(nbCents, entry.getKey(), entry.getValue(), toReturn);
         }
 
         return toReturn;
+    }
+
+    private void manageDivisor(int nbCents, int divisor, String field, Set<ScalaskelResult> toReturn) {
+        if (nbCents == divisor) {
+            ScalaskelResult single  = new ScalaskelResult();
+            single.add(field, 1);
+            toReturn.add(single);
+        }
+
+        if (nbCents > divisor) {
+            int nb = (nbCents / divisor) -1;
+            if (nb == 0) nb = 1;
+            for (int i = 1; i<=nb; i++) {
+                Set<ScalaskelResult> changeResult = change(nbCents - divisor * i);
+                for (ScalaskelResult result : changeResult) {
+                    result.add(field, i);
+                }
+                toReturn.addAll(changeResult);
+            }
+        }
     }
 }

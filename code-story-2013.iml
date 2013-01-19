@@ -12,6 +12,11 @@
         </sourceRoots>
       </configuration>
     </facet>
+    <facet type="Infinitest" name="Infinitest">
+      <configuration scmUpdateGreenHook="false">
+        <license />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />

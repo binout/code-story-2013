@@ -7,6 +7,21 @@ public class ScalaskelResult {
     private Integer qix;
     private Integer baz;
 
+    public void add(String field, Integer toAdd) {
+        if ("foo".equals(field)) {
+            this.foo = this.foo == null ? new Integer(toAdd) : this.foo + toAdd;
+        }
+        if ("bar".equals(field)) {
+            this.bar = this.bar == null ? new Integer(toAdd) : this.bar + toAdd;
+        }
+        if ("qix".equals(field)) {
+            this.qix = this.qix == null ? new Integer(toAdd) : this.qix + toAdd;
+        }
+        if ("baz".equals(field)) {
+            this.baz = this.baz == null ? new Integer(toAdd) : this.baz + toAdd;
+        }
+    }
+
     public Integer getFoo() {
         return foo;
     }
@@ -19,14 +34,6 @@ public class ScalaskelResult {
         return bar;
     }
 
-    public void addBar(Integer bar) {
-        if (this.bar == null) {
-            this.bar = new Integer(bar);
-        } else {
-            this.bar += bar;
-        }
-    }
-
     public void setBar(Integer bar) {
         this.bar = bar;
     }
@@ -35,28 +42,12 @@ public class ScalaskelResult {
         return qix;
     }
 
-    public void addQix(Integer qix) {
-        if (this.qix == null) {
-            this.qix = new Integer(qix);
-        } else {
-            this.qix += qix;
-        }
-    }
-
     public void setQix(Integer qix) {
         this.qix = qix;
     }
 
     public Integer getBaz() {
         return baz;
-    }
-
-    public void addBaz(Integer baz) {
-        if (this.baz == null) {
-            this.baz = new Integer(baz);
-        } else {
-            this.baz += baz;
-        }
     }
 
     public void setBaz(Integer baz) {

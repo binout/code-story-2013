@@ -57,7 +57,7 @@ public class HeinRestService {
         cache = CacheBuilder.newBuilder().maximumSize(MAX_SCALASKEL).build(new CacheLoader<Integer, String>() {
             @Override
             public String load(Integer key) throws Exception {
-                List<ScalaskelResult> result = scalaskel.change(key);
+                Set<ScalaskelResult> result = scalaskel.change(key);
                 return gson.toJson(result);
             }
         });

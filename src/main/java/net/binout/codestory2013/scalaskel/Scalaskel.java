@@ -1,12 +1,11 @@
 package net.binout.codestory2013.scalaskel;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Scalaskel {
 
-    public List<ScalaskelResult> change(int nbCents) {
-        List<ScalaskelResult> toReturn = new ArrayList<ScalaskelResult>();
+    public Set<ScalaskelResult> change(int nbCents) {
+        Set<ScalaskelResult> toReturn = new LinkedHashSet<ScalaskelResult>();
 
         ScalaskelResult withFoo  = new ScalaskelResult();
         withFoo.setFoo(nbCents);
@@ -23,7 +22,7 @@ public class Scalaskel {
              int nbBar = (nbCents / 7) -1;
              if (nbBar == 0) nbBar = 1;
              for (int i = 1; i<=nbBar; i++) {
-                 List<ScalaskelResult> barChange = change(nbCents - 7 * i);
+                 Set<ScalaskelResult> barChange = change(nbCents - 7 * i);
                  for (ScalaskelResult result : barChange) {
                      result.addBar(i);
                  }
@@ -41,7 +40,7 @@ public class Scalaskel {
             int nbQix = (nbCents / 11) -1;
             if (nbQix == 0) nbQix = 1;
             for (int i = 1; i<=nbQix; i++) {
-                List<ScalaskelResult> qixChange = change(nbCents - 11 * i);
+                Set<ScalaskelResult> qixChange = change(nbCents - 11 * i);
                 for (ScalaskelResult result : qixChange) {
                     result.addQix(i);
                 }
@@ -59,7 +58,7 @@ public class Scalaskel {
             int nbBaz = (nbCents / 21) -1;
             if (nbBaz == 0) nbBaz = 1;
             for (int i = 1; i<=nbBaz; i++) {
-                List<ScalaskelResult> bazChnage = change(nbCents - 21 * i);
+                Set<ScalaskelResult> bazChnage = change(nbCents - 21 * i);
                 for (ScalaskelResult result : bazChnage) {
                     result.addBaz(i);
                 }

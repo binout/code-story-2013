@@ -29,7 +29,7 @@ public class HeinRestServiceIT {
     public static void init() throws IOException {
         System.setProperty(HeinRestService.SCALASKEL_NO_CACHE_LOADING_PROPERTY, "true");
 
-        uri = UriBuilder.fromUri("http://localhost/").port(8282).build();
+        uri = UriBuilder.fromUri("http://localhost/").port(9090).build();
 
         client = ClientFactory.newClient();
 
@@ -68,6 +68,7 @@ public class HeinRestServiceIT {
                 new String[] {"1 1", "2"},
                 new String[] {"(1 2)/2", "1,5"},
                 new String[] {"1*1", "1"},
+                new String[] {"1,5*4", "6"},
         };
     }
 

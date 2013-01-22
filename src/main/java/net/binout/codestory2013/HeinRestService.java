@@ -135,7 +135,8 @@ public class HeinRestService {
     }
 
     private String parseMathQuery(String query) {
-        return query.replaceAll(" ", "+");
+        String result = query.replaceAll(" ", "+");
+        return result.replaceAll(",", "\\.");
     }
 
     private void logAllQueryParameters(UriInfo uriInfo) {

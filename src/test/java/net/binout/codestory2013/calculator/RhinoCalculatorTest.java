@@ -13,6 +13,7 @@ public class RhinoCalculatorTest {
         return new Object[][] {
                 new String[] {"1+1",  "2"},
                 new String[] {"(1+2)/2",  "1.5"},
+                new String[] {"1.5*4",  "6"},
         };
     }
 

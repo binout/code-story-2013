@@ -67,6 +67,7 @@ public class HeinRestServiceIT {
                 new String[] {HeinRestService.AS_TU_BIEN_RECU_LE_PREMIER_ENONCE_OUI_NON, HeinRestService.OUI},
                 new String[] {"1 1", "2"},
                 new String[] {"(1 2)/2", "1,5"},
+                new String[] {"1*1", "1"},
         };
     }
 

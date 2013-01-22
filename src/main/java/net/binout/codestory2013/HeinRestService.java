@@ -119,8 +119,19 @@ public class HeinRestService {
         return badRequest();
     }
 
-    private String toMathFrench(String exp) {
-        return exp.replaceAll("\\.", ",");
+    String toMathFrench(String exp) {
+        String result = exp;
+        double d = Double.parseDouble(result);
+        int i = (int) d;
+        if (i == d) {
+            // if number is entire, remove all characters after .
+            int index = result.indexOf('.');
+            if (index != -1) {
+                result = result.substring(0, index);
+            }
+        }
+        result = result.replaceAll("\\.", ",");
+        return result;
     }
 
     private String parseMathQuery(String query) {

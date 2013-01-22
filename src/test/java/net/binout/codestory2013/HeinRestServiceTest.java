@@ -1,6 +1,7 @@
 package net.binout.codestory2013;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class HeinRestServiceTest {
@@ -30,5 +31,20 @@ public class HeinRestServiceTest {
     public void constructor_should_create_calculator() {
         HeinRestService service = new HeinRestService();
         Assert.assertNotNull(service.calculator);
+    }
+
+    @DataProvider
+    public Object[][] toMathFrench_provider() {
+        return new Object[][] {
+                new String[] {"1.5", "1,5"},
+                new String[] {"1.0", "1"},
+        };
+    }
+
+    @Test(dataProvider = "toMathFrench_provider")
+    public void toMathFrench_should_convert(String exp, String expected) {
+        HeinRestService service = new HeinRestService();
+        String math = service.toMathFrench(exp);
+        Assert.assertEquals(math, expected);
     }
 }

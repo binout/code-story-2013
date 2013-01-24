@@ -4,9 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class RhinoCalculatorTest {
+public class CalculatorTest {
 
-    private RhinoCalculator calculator = new RhinoCalculator();
+    private Calculator calculator = Calculators.getDefaultCalculator();
 
     @DataProvider
     public Object[][] operations() {
@@ -14,8 +14,7 @@ public class RhinoCalculatorTest {
                 new String[] {"1+1",  "2"},
                 new String[] {"(1+2)/2",  "1.5"},
                 new String[] {"1.5*4",  "6"},
-                // not managed, use GroovyCalculator
-                // new String[] {"((1,1+2)+3,14+4+(5+6+7)+(8+9+10)*4267387833344334647677634)/2*553344300034334349999000", "31878018903828901761984975061078744643351263313920"},
+                new String[] {"((1.1+2)+3.14+4+(5+6+7)+(8+9+10)*4267387833344334647677634)/2*553344300034334349999000", "31878018903828901761984975061078744643351263313920"},
         };
     }
 

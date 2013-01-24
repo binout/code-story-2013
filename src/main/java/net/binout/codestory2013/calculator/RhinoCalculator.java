@@ -3,8 +3,9 @@ package net.binout.codestory2013.calculator;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
 
-public class RhinoCalculator {
+public class RhinoCalculator implements Calculator {
 
+    @Override
     public String calculate(String expression) {
         // Create and enter a Context. A Context stores information about the execution environment of a script.
         Context cx = Context.enter();

@@ -8,7 +8,8 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.io.CharStreams;
 import com.google.gson.Gson;
 import com.petebevin.markdown.MarkdownProcessor;
-import net.binout.codestory2013.calculator.RhinoCalculator;
+import net.binout.codestory2013.calculator.Calculator;
+import net.binout.codestory2013.calculator.Calculators;
 import net.binout.codestory2013.scalaskel.Scalaskel;
 import net.binout.codestory2013.scalaskel.ScalaskelResult;
 
@@ -43,7 +44,7 @@ public class HeinRestService {
 
     List<String> enonces;
     LoadingCache<Integer, String> cache;
-    RhinoCalculator calculator;
+    Calculator calculator;
 
     public HeinRestService() {
         enonces = new ArrayList<String>();
@@ -65,7 +66,7 @@ public class HeinRestService {
             }
         });
 
-        calculator = new RhinoCalculator();
+        calculator = Calculators.getDefaultCalculator();
     }
 
     @PostConstruct
